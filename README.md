@@ -32,7 +32,15 @@ Once the app is running, you can start chatting with the ChatGpt API by typing y
 
 ### Screenshots
 <img src="./screenshots/a.png" width="300" /> 
-<img src="./screenshots/b.png" width="300" /> 
+<img src="./screenshots/b.png" width="300" />
+
+### Deploy
+
+```bash
+npm run build
+```
+
+Drop the dist folder to [netlify](https://app.netlify.com/drop).
 
 
 ### License
