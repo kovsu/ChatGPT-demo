@@ -4,8 +4,9 @@ import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <div w-prose m-auto my-0>
+  <div w-prose m-auto my-0 px-4>
     <Header />
+    <RouterView />
     <Footer />
   </div>
 </template>

@@ -11,8 +11,8 @@ const toggleDark = useToggle(isDark);
       <span text-transparent bg-clip-text bg-gradient-to-r from-primary-cl to-secondary-cl dark:from-primary-cl-dark dark:to-secondary-cl-dark>ChatGPT</span> Demo
     </h1>
     <div @click="toggleDark()">
-      <button v-if="isDark" class="i-mdi-white-balance-sunny" cursor-pointer text-7 />
-      <button v-else class="i-mdi-moon-last-quarter" cursor-pointer text-7 />
+      <button v-if="isDark" class="i-mdi-white-balance-sunny" cursor-pointer text-7 border-none />
+      <button v-else class="i-mdi-moon-last-quarter" cursor-pointer text-7 border-none />
     </div>
   </header>
   <p text-6 text-note-cl>

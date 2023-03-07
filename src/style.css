@@ -23,3 +23,25 @@ html {
 .iconify {
   font-size: 2.4rem;
 }
+
+/* 滚动条整体 */
+::-webkit-scrollbar {
+  height: 20px;
+  width: 10px;
+}
+/* 两个滚动条交接处 -- x轴和y轴 */
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #d0d0d0, transparent);
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: transparent;
+}

@@ -6,7 +6,7 @@ This is a demo project that showcases the capabilities of the ChatGpt API. It is
 1. Clone the repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/your_username/chatgpt-demo.git
+git clone https://github.com/kovsu/ChatGPT-demo.git
 
 cd chatgpt-demo
 ```

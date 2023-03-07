@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.41"
+    "dayjs": "^1.11.7",
+    "vue": "^3.2.41",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.1.49",
