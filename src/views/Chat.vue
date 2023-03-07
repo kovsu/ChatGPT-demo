@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import { chatData } from "../composable/utils";
+import { chatData, chatWithAssistant } from "../composable/utils";
 import Loading from "../components/Loading.vue";
 
 const route = useRoute();
@@ -23,7 +23,7 @@ const clear = () => {
   state.messages = [];
 };
 
-const sendMessage = () => {
+const sendMessage = async () => {
   disable.value = true;
   state.messages.push({
     role: "user",
@@ -31,6 +31,14 @@ const sendMessage = () => {
   });
   message.value = "";
   disable.value = false;
+
+  state.messages.push({
+    role: "assistant",
+    content: "",
+  });
+
+  const res = await chatWithAssistant(state.messages);
+  state.messages[state.messages.length - 1].content = res.content;
 
   setTimeout(() => {
     container.value?.scrollTo({
@@ -54,11 +62,11 @@ const sendMessage = () => {
       <div text-3xl cursor-pointer class="i-mdi-trash-can-outline" @click="clear" />
     </header>
     <div ref="container" h-4xl p-4 my-4 flex flex-col gap-4 overflow-y-scroll overflow-x-hidden>
-      <Loading />
       <TransitionGroup name="message">
         <div v-for="(message, index) in state?.messages" :key="index" w-max :class="message.role === 'user' ? 'self-end' : 'self-start'">
           <div p-4 bg-chat-bg max-w-xl w-max rounded-lg>
-            <p text-6 break-words>
+            <Loading v-if="message.content === ''" />
+            <p v-else text-6 break-words>
               {{ message.content }}
             </p>
           </div>

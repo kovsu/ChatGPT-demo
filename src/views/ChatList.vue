@@ -5,6 +5,7 @@ import { chatData as data, generateDate } from "../composable/utils";
 
 const mask = ref(false);
 const router = useRouter();
+const num = ref(1);
 
 const remove = (index: number) => {
   data.splice(index, 1);
@@ -13,75 +14,11 @@ const remove = (index: number) => {
 const newChat = () => {
   mask.value = true;
   data.push({
-    name: `Chat ${data.length + 1}`,
+    name: `Chat ${num.value}`,
     created: generateDate(),
-    messages: [
-      {
-        role: "user",
-        content: "Hello!",
-      },
-      {
-        role: "assistant",
-        content: "Hello! What can I do for you? adsadaasd adsad sads adasdasd dadasdsa dadsada sdasd asda sd",
-      },
-      {
-        role: "user",
-        content: "Hello!",
-      },
-      {
-        role: "assistant",
-        content: "Hello! What can I do for you? adsadaasd adsad sads adasdasd dadasdsa dadsada sdasd asda sd",
-      },
-      {
-        role: "user",
-        content: "Hello!",
-      },
-      {
-        role: "assistant",
-        content: "Hello! What can I do for you? adsadaasd adsad sads adasdasd dadasdsa dadsada sdasd asda sd",
-      },
-      {
-        role: "user",
-        content: "Hello!",
-      },
-      {
-        role: "assistant",
-        content: "Hello! What can I do for you? adsadaasd adsad sads adasdasd dadasdsa dadsada sdasd asda sd",
-      },
-      {
-        role: "user",
-        content: "Hello!",
-      },
-      {
-        role: "assistant",
-        content: "Hello! What can I do for you? adsadaasd adsad sads adasdasd dadasdsa dadsada sdasd asda sd",
-      },
-      {
-        role: "user",
-        content: "Hello!",
-      },
-      {
-        role: "assistant",
-        content: "Hello! What can I do for you? adsadaasd adsad sads adasdasd dadasdsa dadsada sdasd asda sd",
-      },
-      {
-        role: "user",
-        content: "Hello!",
-      },
-      {
-        role: "assistant",
-        content: "Hello! What can I do for you? adsadaasd adsad sads adasdasd dadasdsa dadsada sdasd asda sd",
-      },
-      {
-        role: "user",
-        content: "Hello!",
-      },
-      {
-        role: "assistant",
-        content: "Hello! What can I do for you? adsadaasd adsad sads adasdasd dadasdsa dadsada sdasd asda sd",
-      },
-    ],
+    messages: [],
   });
+  num.value++;
   mask.value = false;
 };
 

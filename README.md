@@ -30,6 +30,11 @@ Note: If you don't have a Open API key yet, you can sign up for one at [api-keys
 
 Once the app is running, you can start chatting with the ChatGpt API by typing your messages into the input field at the bottom of the screen and pressing Enter. The API will respond with a generated message, which will be displayed in the chat history above.
 
+### Screenshots
+<img src="./screenshots/a.png" /> 
+<img src="./screenshots/b.png" /> 
+
+
 ### License
 
 This project is licensed under the MIT License. See the LICENSE file for more information.

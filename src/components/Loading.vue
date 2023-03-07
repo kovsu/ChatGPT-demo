@@ -8,7 +8,7 @@
 
 <style scoped>
 .balls {
-  width: 4em;
+  width: 3em;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -16,8 +16,8 @@
 }
 
 .balls div {
-  width: 0.8em;
-  height: 0.8em;
+  width: 0.4em;
+  height: 0.4em;
   border-radius: 50%;
   background-color: #333;
 }
