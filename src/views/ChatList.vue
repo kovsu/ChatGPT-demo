@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import { chatData as data, generateDate } from "../composable/utils";
+import { chatData as data, generateDate, num } from "../composable/utils";
 
 const mask = ref(false);
 const router = useRouter();
-const num = ref(1);
 
 const remove = (index: number) => {
   data.splice(index, 1);

@@ -1,4 +1,4 @@
-import { reactive } from "vue";
+import { reactive, ref } from "vue";
 import dayjs from "dayjs";
 
 interface Message {
@@ -11,6 +11,8 @@ interface Chat {
   created: string
   messages: Message[]
 }
+
+export const num = ref(1);
 
 export const chatData = reactive<Chat[]>([]);
 
